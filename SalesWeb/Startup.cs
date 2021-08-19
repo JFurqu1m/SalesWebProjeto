@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWeb.Models;
 using SalesWeb.Data;
+using SalesWeb.Services;
 
 namespace SalesWeb
 {
@@ -42,6 +43,7 @@ namespace SalesWeb
 builder.MigrationsAssembly("SalesWeb")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
 
         }
